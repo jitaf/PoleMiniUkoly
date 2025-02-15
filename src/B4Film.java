@@ -6,4 +6,12 @@ public class B4Film {
         this.nazev = nazev;
         this.delka = delka;
     }
+
+    public String getNazev() {
+        return nazev;
+    }
+
+    public int getDelka() {
+        return delka;
+    }
 }

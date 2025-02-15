@@ -17,6 +17,7 @@ public class Main {
         A3Cisla cp = new A3Cisla();
         System.out.print("Kolik čísel zadáš? ");
         int N = sc.nextInt();
+        sc.nextLine();
         int[] pole = cp.nactiCisla(N);
         System.out.println("Průměr: " + cp.urciPrumer(pole));
 
@@ -73,7 +74,7 @@ public class Main {
         }
 
         System.out.println("Nejlepší student: " + nejlepsi.getJmeno());
-    /*
+
         // B3: Autobusy
         B3Autobus[] autobusy = new B3Autobus[3];
         B3Autobus nejviceMista = null;
@@ -83,11 +84,11 @@ public class Main {
             System.out.print("Zadej počet cestujících: ");
             int cestujici = sc.nextInt();
             autobusy[i] = new B3Autobus(kapacita, cestujici);
-            if (nejviceMista == null || (kapacita - cestujici) > (nejviceMista.kapacita - nejviceMista.cestujici)) {
+            if (nejviceMista == null || (kapacita - cestujici) > (nejviceMista.getKapacita() - nejviceMista.getCestujici())) {
                 nejviceMista = autobusy[i];
             }
         }
-        System.out.println("Autobus s nejvíce volnými místy má kapacitu " + nejviceMista.kapacita + " a " + (nejviceMista.kapacita - nejviceMista.cestujici) + " volných míst.");
+        System.out.println("Autobus s nejvíce volnými místy má kapacitu " + nejviceMista.getKapacita() + " a " + (nejviceMista.getKapacita() - nejviceMista.getCestujici()) + " volných míst.");
 
         // B4: Filmy
         B4Film[] filmy = new B4Film[4];
@@ -111,13 +112,12 @@ public class Main {
             System.out.print("Zadej kód barvy: ");
             String kod = sc.next();
             barvy[i] = new B5Barva(nazev, kod);
-            if (nejkratsiKod == null || kod.length() < nejkratsiKod.kod.length()) {
+            if (nejkratsiKod == null || kod.length() < nejkratsiKod.getKod().length()) {
                 nejkratsiKod = barvy[i];
             }
         }
-        System.out.println("Barva s nejkratším kódem: " + nejkratsiKod.nazev + " (" + nejkratsiKod.kod + ")");
+        System.out.println("Barva s nejkratším kódem: " + nejkratsiKod.getNazev() + " (" + nejkratsiKod.getKod() + ")");
 
-*/
 
     }
 }

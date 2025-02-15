@@ -6,4 +6,12 @@ public class B3Autobus {
         this.kapacita = kapacita;
         this.cestujici = cestujici;
     }
+
+    public int getKapacita() {
+        return kapacita;
+    }
+
+    public int getCestujici() {
+        return cestujici;
+    }
 }
